@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1-D3 - CSS Flex</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="header" class="d-flex pl-0 pr-0 flex-column black-bg child">
+            <nav class="navbar">
+                <a href="home" class="navbar-brand"><img src="/img/logo.png" alt="OptiControl Logo" width="174px"></a>
+            </nav>
+            <div class="header-text-container" style="z-index:2">
+                <div>
+                    <h1>
+                        <span style="font-weight: 300">
+                            Family-owned company <br> producing the
+                        </span>
+                        <span><strong>best-quality <br> eyeglasses</strong></span>
+                        <span style="font-weight: 300">since 1986.</span>
+                    </h1>
+                    <span class="sub-heading">
+                        <p>We also provide services for optical <br> optometrists, contactology, image consulting <br>
+                            and more. Request an appointment for details.</p>
+                    </span>
+                    <button type="button" class="btn btn-primary"><i class="bi bi-pen"
+                            style="margin-right: 1rem"></i>Request Appointment</button>
+                </div>
+            </div>
+        </div>
+        <div id="information" class="child">
+            <section id="about-us">
+                <div id="about-us-text" class="header-padding">
+                    <div id="about-info-section">
+                        <h2 class="section-heading" id="about-heading"><span class="hyphen"> -</span> About Us</h2>
+                        <ul class="list-padding">
+                            <li>Based in <strong>Spain</strong> <span class="emoji">🇪🇸</span> </li>
+                            <li><strong>Independent</strong> and <strong>family-owned</strong> <span
+                                    class="emoji">👪</span>
+                            </li>
+                            <li><strong>Multi-lingual</strong> <span class="emoji">🇬🇧 🇫🇷 🇮🇹</span></li>
+                            <li><strong>100% satisfaction</strong> (or a refund) <span class="emoji">✅</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div id="services-text" class="header-padding">
+                    <h2 class="section-heading" id="services-heading"><span class="hyphen"> -</span> Our Services</h2>
+                </div>
+            </section>
+        </div>
+        <section id="coupons"></section>
+        <section id="instagram"></section>
+        <footer></footer>
+
+    </div>
+
+</body>
+
+</html>
