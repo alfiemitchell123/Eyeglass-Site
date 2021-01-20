@@ -79,9 +79,11 @@
                             online.
                         </p>
 
-                        <div class="d-flex">
-                            <img src="/img/Eyeglass-Image-1.png" alt="">
-                            <img src="/img/Eyeglass-Image-2.png" alt="">
+                        <div class="d-flex flex-column">
+                            <img class="service-img" src="/img/Eyeglass-Image-1.png" alt="Eyeglasses on bench"
+                                width="156px">
+                            <img class="service-img" src="/img/Eyeglass-Image-2.png" alt="Eyeglasses and notebook"
+                                width="156px">
                         </div>
                     </div>
                     <div class="service-box" style="display: none"></div>
@@ -97,5 +99,11 @@
     </div>
 
 </body>
+
+<script type="text/javascript">
+    document.getElementsByClassName('service-li-item').onmouseover = function () {
+        document.getElementsByClassName('service-box').style.display = "inline";
+    }
+</script>
 
 </html>

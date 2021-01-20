@@ -178,7 +178,7 @@ li::before {
 .service-li-item:hover {
     color: white;
     background-color: #F09217;
-    background: linear-gradient(to right, #ffa42d, #F09217);
+    background: linear-gradient(to right, #ffa42d, transparent);
     width: 300px;
     border-radius: 5px;
 }
@@ -198,7 +198,16 @@ li:hover::before {
 }
 
 .service-p {
+    position: relative;
+    top: 40px;
     padding-left: 3em;
+}
+
+.service-img {
+    padding-bottom: 1em;
+    position: relative;
+    left: 450px;
+    bottom: 230px;
 }
 
 .header-padding {
