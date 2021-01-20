@@ -3,6 +3,11 @@ body {
     font-family: Open Sans, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #F09217;
+}
+
 .container {
     scroll-snap-type: y mandatory;
     max-height: 100vh;
@@ -43,10 +48,6 @@ h1 {
     font-family: EB Garamond, serif;
     display: block;
     font-size: 35px;
-}
-
-#about-heading {
-    /* color: white; */
 }
 
 #services-heading {
@@ -161,6 +162,43 @@ li::before {
 #services {
     height: 70vh;
     background-color: white;
+    background-image: linear-gradient(to top, #dedede 0%, #f0f0f0 100%);
+}
+
+.service-menu {
+    margin-left: 1.7em;
+    padding-top: 3em;
+}
+
+.service-li-item {
+    padding: 1.5em;
+    font-weight: 600;
+}
+
+.service-li-item:hover {
+    color: white;
+    background-color: #F09217;
+    background: linear-gradient(to right, #ffa42d, #F09217);
+    width: 300px;
+    border-radius: 5px;
+}
+
+li:hover::before {
+    color: white;
+}
+
+.service-box {
+    width: 693px;
+    height: 396px;
+    border: 0.5px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    position: relative;
+    left: 500px;
+    bottom: 375px;
+}
+
+.service-p {
+    padding-left: 3em;
 }
 
 .header-padding {
