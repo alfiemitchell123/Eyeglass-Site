@@ -18,6 +18,16 @@ a {
     scroll-snap-align: start;
 }
 
+.scroll {
+    color: #F09217;
+    font-size: 30px;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
 #header {
     background-image:url('/img/Header-Img.png');
     position: relative;
