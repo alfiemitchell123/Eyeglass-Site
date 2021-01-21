@@ -41,7 +41,7 @@
                 <div id="about-us-text" class="header-padding">
                     <div id="about-info-section">
                         <h2 class="section-heading" id="about-heading"><span class="hyphen"> /</span> About Us</h2>
-                        <ul class="list-padding">
+                        <ul class="list-padding info-ul">
                             <li>Based in <strong>Spain</strong> <span class="emoji">🇪🇸</span> </li>
                             <li><strong>Independent</strong> and <strong>family-owned</strong> <span
                                     class="emoji">👪</span>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </section>
-            <section id="services">
+            <section id="services" class="child">
                 <div id="services-text" class="header-padding">
                     <h2 class="section-heading" id="services-heading"><span class="hyphen"> /</span> Our Services</h2>
                     <ul class="service-menu">
@@ -92,18 +92,40 @@
                 </div>
             </section>
         </div>
-        <section id="coupons"></section>
+        <section id="coupons" class="child">
+            <div id="coupon-container">
+                <div class="coupon-box" id="coupon-1" style="background-image: url(img/Coupon-1.png)">
+                    <div class="coupon-text-container">
+                        <p>2-4-1 ON ALL TOM FORD EYEGLASSES</p>
+                    </div>
+                    <button class="btn btn-primary btn-coupon">Buy Now</button>
+                </div>
+                <div class="coupon-box" id="coupon-2" style="background-image: url(img/Coupon-2.png)">
+                    <div class="coupon-text-container">
+                        <p>BUY ONE GET ONE ON CONTACT LENSES</p>
+                    </div>
+                    <button class="btn btn-primary btn-coupon">Buy Now</button>
+                </div>
+                <div class="coupon-box" id="coupon-3" style="background-image: url(img/Coupon-3.png)">
+                    <div class="coupon-text-container">
+                        <p>FREE EYEGLASSES CASE WITH EVERY PURCHASE</p>
+                    </div>
+                    <button class="btn btn-primary btn-coupon">Buy Now</button>
+                </div>
+                <div class="coupon-box" id="coupon-4" style="background-image: url(img/Coupon-4.png)">
+                    <div class="coupon-text-container">
+                        <p>50% OFF RAY BAN SUNGLASSES</p>
+                    </div>
+                    <button class="btn btn-primary btn-coupon">Buy Now</button>
+                </div>
+            </div>
+        </section>
         <section id="instagram"></section>
+        <section id="contact"></section>
         <footer></footer>
 
     </div>
 
 </body>
-
-<script type="text/javascript">
-    document.getElementsByClassName('service-li-item').onmouseover = function () {
-        document.getElementsByClassName('service-box').style.display = "inline";
-    }
-</script>
 
 </html>
