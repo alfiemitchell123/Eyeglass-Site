@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Open Sans, sans-serif;
+    font-family: Lato, sans-serif;
 }
 
 a {
@@ -72,7 +72,7 @@ h1 {
 
 p {
     color: black;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.8px;
     margin-top: 2rem;
 }
 
@@ -81,6 +81,7 @@ p {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.2px;
 }
 
 .btn:hover {
@@ -407,16 +408,20 @@ li:hover::before {
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
+.ig-photo:hover {
+    background: black;
+}
+
 footer {
     display: grid;
     background-image: linear-gradient(to top, #dedede 0%, #f0f0f0 100%);
-    min-height: 15vh;
+    min-height: 12vh;
     align-items: center;
     grid-template-columns: repeat(32, 1fr);
 }
 
 #trademark-container {
-    grid-column: 8 / 10;
+    grid-column: 3 / 5;
     text-align: left;
     width: 100px;
 }
@@ -429,7 +434,7 @@ footer {
 }
 
 #social-icons-container {
-    grid-column: 24 / 26;
+    grid-column: 29 / 31;
     text-align: right;
     width: 70px;
 }
@@ -437,9 +442,25 @@ footer {
 .footer-icon {
     display: inline-grid;
     background-repeat: no-repeat;
-    background-size: 32px;
-    height: 32px;
-    width: 32px;
+    background-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+#trademark {
+    color: black;
+    overflow: hidden;
+    background: linear-gradient(to right, #F09217, #F09217 50%, black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+#trademark:hover {
+    background-position: 0 100%;
 }
 
 .d-flex {
