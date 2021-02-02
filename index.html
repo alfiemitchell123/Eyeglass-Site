@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-    <title>W1-D3 - CSS Flex</title>
+    <title>OptiControl</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
@@ -39,10 +40,29 @@
                         <p>We also provide services for optical <br> optometrists, contactology, image consulting <br>
                             and more. Request an appointment for details.</p>
                     </span>
-                    <button type="button" class="btn btn-primary"><i class="bi bi-pen"
+                    <button type="button" class="btn btn-primary" id="headerBtn"><i class="bi bi-pen"
                             style="margin-right: 1rem"></i>Request Appointment</button>
                 </div>
             </div>
+
+            <!-- Request Appointment Button Modal -->
+            <div id="headerModal" class="modal">
+
+                <div class="modal-content">
+                    <span id="close">&times;</span>
+                    <h3 style="text-align: center;">Request Appointment</h3>
+                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                        <input type="text" placeholder="First name..." name="firstname">
+                        <input type="text" placeholder="Last name..." name="lastname">
+                        <input type="text" placeholder="Email address..." name="_replyto">
+                        <input type="text" placeholder="Subject..." name="subject">
+                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
+                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                    </form>
+                </div>
+
+            </div>
+
         </div>
         <div id="information" class="child" data-section-name="information">
             <!-- <div class="scroll" width="100px" height="50px">
@@ -86,6 +106,7 @@
                         </ul>
 
                         <div class="service-box tabcontent" id="sales">
+                            <h3 class="service-box-title">Eyeglass Sales</h3>
                             <p class="service-p">We offer a range of eyeglasses
                                 <br> from various brands, including
                                 <br> but not limited to <strong>Bollé</strong>, <strong>Tom
@@ -97,12 +118,30 @@
                             </p>
                             <p class="service-p">
                                 Call us on 12345678 or
-                                <br><span style="color: #F09217; font-weight: bold;"><a href="">request an
+                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
                                         appointment</a></span>
                                 online.
                             </p>
 
-                            <div class="d-flex flex-column">
+                            <!-- Request Appointment Button Modal -->
+                            <div id="headerModal" class="modal">
+
+                                <div class="modal-content">
+                                    <span id="close">&times;</span>
+                                    <h3 style="text-align: center;">Request Appointment</h3>
+                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                        <input type="text" placeholder="First name..." name="firstname">
+                                        <input type="text" placeholder="Last name..." name="lastname">
+                                        <input type="text" placeholder="Email address..." name="_replyto">
+                                        <input type="text" placeholder="Subject..." name="subject">
+                                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
+                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class=" d-flex flex-column">
                                 <img class="service-img" src="img/Eyeglass-Image-1.png" alt="Eyeglasses on bench"
                                     width="156px">
                                 <img class="service-img" src="img/Eyeglass-Image-2.png" alt="Eyeglasses and notebook"
@@ -211,7 +250,8 @@
                         Us
                     </h2>
                     <form id="contact-form" action="https://formspree.io/f/mpzonqgj" method="POST">
-                        <input type="text" placeholder="First name..." name="name">
+                        <input type="text" placeholder="First name..." name="firstname">
+                        <input type="text" placeholder="Last name..." name="lastname">
                         <input type="text" placeholder="Email address..." name="_replyto">
                         <input type="text" placeholder="Subject..." name="subject">
                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
@@ -241,14 +281,15 @@
                 <span id="trademark">OptiControl™</span>
             </div>
             <div id="flag-container">
-                <div class="footer-icon" style="background-image: url('img/flags/spain.svg')" data-toggle="tooltip"
-                    data-placement="top" title="Español"></div>
-                <div class="footer-icon" style="background-image: url('img/flags/uk.svg')" data-toggle="tooltip"
-                    data-placement="top" title="English"></div>
-                <div class="footer-icon" style="background-image: url('img/flags/france.svg')" data-toggle="tooltip"
-                    data-placement="top" title="Français"></div>
-                <div class="footer-icon" style="background-image: url('img/flags/italy.svg')" data-toggle="tooltip"
-                    data-placement="top" title="Italiano"></div>
+                <div class="footer-icon translation-links" style="background-image: url('img/flags/spain.svg')"
+                    data-toggle="tooltip" data-placement="top" title="Español">
+                </div>
+                <div class="footer-icon translation-links" style="background-image: url('img/flags/uk.svg')"
+                    data-toggle="tooltip" data-placement="top" title="English" data-lang="English"></div>
+                <div class="footer-icon translation-links" style="background-image: url('img/flags/france.svg')"
+                    data-toggle="tooltip" data-placement="top" title="Français" data-lang="French"></div>
+                <div class="footer-icon translation-links" style="background-image: url('img/flags/italy.svg')"
+                    data-toggle="tooltip" data-placement="top" title="Italiano" data-lang="Italian"></div>
             </div>
             <div id="social-icons-container">
                 <a href="https://www.facebook.com/opticontrol/" target="_blank">
@@ -267,15 +308,59 @@
 </body>
 
 <script src="jquery-3.5.1.min.js"></script>
-<!-- <script src="jquery.scrollify.js"></script> -->
+<script src="jquery.scrollify.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
 
-<script>
+<script type="text/javascript">
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+
+    $("#a-scroll").click(function () {
+        console.log('Clicked');
+        $('html,body').animate({
+            scrollTop: $("#instagram-contact").offset().top
+        },
+            'slow');
+    });
+
+    var modal = document.getElementById("headerModal");
+    var btn = document.getElementById("headerBtn");
+    var span = document.getElementById("close");
+
+    var arequest = document.getElementById("aRequest");
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    arequest.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            modal.style.display = "none";
+        }
+    });
+
+    // $(function () {
+    //     $.scrollify({
+    //         section: ".child",
+    //     });
+    // });
 </script>
 
 </html>
