@@ -81,30 +81,34 @@
                                     class="emoji">👪</span>
                             </li>
                             <li><strong>Multi-lingual</strong> <span class="emoji">🇬🇧 🇫🇷 🇮🇹</span></li>
-                            <li><strong>100% satisfaction</strong> (or a refund) <span class="emoji">✅</span></li>
+                            <li><strong>100% satisfaction</strong> (or money-back guarantee) <span
+                                    class="emoji">✅</span></li>
                         </ul>
                     </div>
                 </div>
             </section>
+
             <section id="services">
                 <div id="services-container">
                     <div class="header-padding">
                         <h2 class="section-heading b-heading"><span class="hyphen"> /</span>Our Services
                         </h2>
                         <ul class="service-menu">
-                            <li class="service-li-item tablinks" onmouseover="openService(event, 'Sales')">Eyeglass
+                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'sales')">Eyeglass
                                 Sales</li>
-                            <li class="service-li-item tablinks" onmouseover="openService(event, 'Contactology')">
+                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'contactology')">
                                 Contactology
                             </li>
-                            <li class="service-li-item tablinks" onmouseover="openService(event, 'Consulting')">Image
+                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'imageConsulting')">
+                                Image
                                 Consulting
                             </li>
-                            <li class="service-li-item tablinks" onmouseover="openService(event, 'Retinography')">
+                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'retinography')">
                                 Retinography
                             </li>
                         </ul>
 
+                        <!-- Eyeglass Sales Information Box -->
                         <div class="service-box tabcontent" id="sales">
                             <h3 class="service-box-title">Eyeglass Sales</h3>
                             <p class="service-p">We offer a range of eyeglasses
@@ -149,7 +153,140 @@
                             </div>
                         </div>
 
+                        <!-- Contactology Information Box -->
+                        <div class="service-box tabcontent" id="contactology">
+                            <h3 class=" service-box-title">Contactology</h3>
+                            <p class="service-p">We offer a range of contacts
+                                <br> depending on your needs.
+                                <br> Our range is affordable but quality is retained.
+                                <br> We offer both hard and soft lenses.
+                            </p>
+                            <p class="service-p">
+                                Whatever your budget,
+                                <br> we can find lenses that suit you.
+                            </p>
+                            <p class="service-p">
+                                Call us on 12345678 or
+                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                        appointment</a></span>
+                                online.
+                            </p>
+
+                            <!-- Request Appointment Button Modal -->
+                            <div id="headerModal" class="modal">
+
+                                <div class="modal-content">
+                                    <span id="close">&times;</span>
+                                    <h3 style="text-align: center;">Request Appointment</h3>
+                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                        <input type="text" placeholder="First name..." name="firstname">
+                                        <input type="text" placeholder="Last name..." name="lastname">
+                                        <input type="text" placeholder="Email address..." name="_replyto">
+                                        <input type="text" placeholder="Subject..." name="subject">
+                                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
+                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class=" d-flex flex-column">
+                                <img class="service-img" src="img/Contacts-1.png" alt="Human eye" width="156px">
+                                <img class="service-img" src="img/Contacts-2.png" alt="Contact lenses" width="156px">
+                            </div>
+                        </div>
+
+                        <!-- Image Consulting Information Box -->
+                        <div class="service-box tabcontent" id="imageConsulting">
+                            <h3 class="service-box-title">Image Consulting</h3>
+                            <p class="service-p">We can assess your personal
+                                <br> image and help you reach your goals.
+                                <br> We have over 10 years of experience
+                                <br> in image consulting.
+                            </p>
+                            <p class="service-p">
+                                It doesn't have to be expensive either.
+                                <br> We offer a range of packages
+                                <br> to suit your needs.
+                            </p>
+                            <p class="service-p">
+                                Call us on 12345678 or
+                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                        appointment</a></span>
+                                online.
+                            </p>
+
+                            <!-- Request Appointment Button Modal -->
+                            <div id="headerModal" class="modal">
+
+                                <div class="modal-content">
+                                    <span id="close">&times;</span>
+                                    <h3 style="text-align: center;">Request Appointment</h3>
+                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                        <input type="text" placeholder="First name..." name="firstname">
+                                        <input type="text" placeholder="Last name..." name="lastname">
+                                        <input type="text" placeholder="Email address..." name="_replyto">
+                                        <input type="text" placeholder="Subject..." name="subject">
+                                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
+                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <img class="service-img" src="img/Image-Consulting-1.png" alt="Man with glasses"
+                                    width="156px">
+                                <img class="service-img" src="img/Image-Consulting-2.png" alt="Man with glasses"
+                                    width="156px">
+                            </div>
+                        </div>
+
+                        <!-- Retinography Information Box -->
+                        <div class="service-box tabcontent" id="retinography">
+                            <h3 class="service-box-title">Retinography</h3>
+                            <p class="service-p">We offer a range of contacts
+                                <br> from various brands, including
+                                <br> but not limited to <strong>Bollé</strong>, <strong>Tom
+                                    <br> Ford</strong>, <strong>Dior</strong> and many more.
+                            </p>
+                            <p class="service-p">
+                                Whatever your budget or style,
+                                <br> we can find a pair that suits you.
+                            </p>
+                            <p class="service-p">
+                                Call us on 12345678 or
+                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                        appointment</a></span>
+                                online.
+                            </p>
+
+                            <!-- Request Appointment Button Modal -->
+                            <div id="headerModal" class="modal">
+
+                                <div class="modal-content">
+                                    <span id="close">&times;</span>
+                                    <h3 style="text-align: center;">Request Appointment</h3>
+                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                        <input type="text" placeholder="First name..." name="firstname">
+                                        <input type="text" placeholder="Last name..." name="lastname">
+                                        <input type="text" placeholder="Email address..." name="_replyto">
+                                        <input type="text" placeholder="Subject..." name="subject">
+                                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
+                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <img class="service-img" src="img/Retina-1.png" alt="Human man retina" width="156px">
+                                <img class="service-img" src="img/Retina-2.png" alt="Human woman retina" width="156px">
+                            </div>
+                        </div>
+
                         <div class="clearfix"></div>
+
                     </div>
                 </div>
             </section>
@@ -255,8 +392,7 @@
                         <input type="text" placeholder="Email address..." name="_replyto">
                         <input type="text" placeholder="Subject..." name="subject">
                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                        <button type="submit" class="btn btn-primary"
-                            style="box-shadow: none; width: 424px; height: 50px;">Send</button>
+                        <button type="submit" class="btn btn-primary" id="btn-contact">Send</button>
                     </form>
                 </div>
             </div>
@@ -326,6 +462,7 @@
             'slow');
     });
 
+    // Modal start
     var modal = document.getElementById("headerModal");
     var btn = document.getElementById("headerBtn");
     var span = document.getElementById("close");
@@ -355,12 +492,24 @@
             modal.style.display = "none";
         }
     });
+    // Modal end
 
-    // $(function () {
-    //     $.scrollify({
-    //         section: ".child",
-    //     });
-    // });
+    // Services information start
+
+    function changeInfo(event, serviceInfo) {
+        var tablinks = document.getElementsByClassName('tablinks');
+        var tabcontent = document.getElementsByClassName('tabcontent');
+        var i;
+
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(serviceInfo).style.display = "block";
+        event.currentTarget.className += " active";
+    }
 </script>
 
 </html>
