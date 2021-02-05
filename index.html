@@ -110,42 +110,46 @@
 
                         <!-- Eyeglass Sales Information Box -->
                         <div class="service-box tabcontent" id="sales">
-                            <h3 class="service-box-title">Eyeglass Sales</h3>
-                            <p class="service-p">We offer a range of eyeglasses
-                                <br> from various brands, including
-                                <br> but not limited to <strong>Bollé</strong>, <strong>Tom
-                                    <br> Ford</strong>, <strong>Dior</strong> and many more.
-                            </p>
-                            <p class="service-p">
-                                Whatever your budget or style,
-                                <br> we can find a pair that suits you.
-                            </p>
-                            <p class="service-p">
-                                Call us on 12345678 or
-                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
-                                        appointment</a></span>
-                                online.
-                            </p>
+                            <div class="service-box-text-container">
+                                <h3 class="service-box-title">Eyeglass Sales</h3>
+                                <p class="service-p">We offer a range of eyeglasses
+                                    <br> from various brands, including
+                                    <br> but not limited to <strong>Bollé</strong>, <strong>Tom
+                                        <br> Ford</strong>, <strong>Dior</strong> and many more.
+                                </p>
+                                <p class="service-p">
+                                    Whatever your budget or style,
+                                    <br> we can find a pair that suits you.
+                                </p>
+                                <p class="service-p">
+                                    Call us on 12345678 or
+                                    <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                            appointment</a></span>
+                                    online.
+                                </p>
 
-                            <!-- Request Appointment Button Modal -->
-                            <div id="headerModal" class="modal">
+                                <!-- Request Appointment Button Modal -->
+                                <div id="headerModal" class="modal">
 
-                                <div class="modal-content">
-                                    <span id="close">&times;</span>
-                                    <h3 style="text-align: center;">Request Appointment</h3>
-                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
-                                        <input type="text" placeholder="First name..." name="firstname">
-                                        <input type="text" placeholder="Last name..." name="lastname">
-                                        <input type="text" placeholder="Email address..." name="_replyto">
-                                        <input type="text" placeholder="Subject..." name="subject">
-                                        <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
-                                    </form>
+                                    <div class="modal-content">
+                                        <span id="close">&times;</span>
+                                        <h3 style="text-align: center;">Request Appointment</h3>
+                                        <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                            <input type="text" placeholder="First name..." name="firstname">
+                                            <input type="text" placeholder="Last name..." name="lastname">
+                                            <input type="text" placeholder="Email address..." name="_replyto">
+                                            <input type="text" placeholder="Subject..." name="subject">
+                                            <textarea rows="4" cols="50" placeholder="Message..."
+                                                name="message"></textarea>
+                                            <button type="submit" class="btn btn-primary"
+                                                id="send-btn-modal">Send</button>
+                                        </form>
+                                    </div>
+
                                 </div>
-
                             </div>
 
-                            <div class=" d-flex flex-column">
+                            <div class="d-flex flex-column service-img-container">
                                 <img class="service-img" src="img/Eyeglass-Image-1.png" alt="Eyeglasses on bench"
                                     width="156px">
                                 <img class="service-img" src="img/Eyeglass-Image-2.png" alt="Eyeglasses and notebook"
@@ -190,7 +194,7 @@
 
                             </div>
 
-                            <div class=" d-flex flex-column">
+                            <div class="d-flex flex-column service-img-container">
                                 <img class="service-img" src="img/Contacts-1.png" alt="Human eye" width="156px">
                                 <img class="service-img" src="img/Contacts-2.png" alt="Contact lenses" width="156px">
                             </div>
@@ -234,7 +238,7 @@
 
                             </div>
 
-                            <div class="d-flex flex-column">
+                            <div class="d-flex flex-column service-img-container">
                                 <img class="service-img" src="img/Image-Consulting-1.png" alt="Man with glasses"
                                     width="156px">
                                 <img class="service-img" src="img/Image-Consulting-2.png" alt="Man with glasses"
@@ -245,14 +249,15 @@
                         <!-- Retinography Information Box -->
                         <div class="service-box tabcontent" id="retinography">
                             <h3 class="service-box-title">Retinography</h3>
-                            <p class="service-p">We offer a range of contacts
-                                <br> from various brands, including
-                                <br> but not limited to <strong>Bollé</strong>, <strong>Tom
-                                    <br> Ford</strong>, <strong>Dior</strong> and many more.
+                            <p class="service-p">Our retinography services are
+                                <br> some of the best in the industry.
+                                <br> If you're having difficulties with your
+                                <br> retina, or your eyesight needs improving.
+                                <br> We can fix that.
                             </p>
                             <p class="service-p">
-                                Whatever your budget or style,
-                                <br> we can find a pair that suits you.
+                                Whatever your budget,
+                                <br> we can find a service that suits you.
                             </p>
                             <p class="service-p">
                                 Call us on 12345678 or
@@ -279,18 +284,17 @@
 
                             </div>
 
-                            <div class="d-flex flex-column">
+                            <div class="d-flex flex-column service-img-container">
                                 <img class="service-img" src="img/Retina-1.png" alt="Human man retina" width="156px">
                                 <img class="service-img" src="img/Retina-2.png" alt="Human woman retina" width="156px">
                             </div>
                         </div>
 
-                        <div class="clearfix"></div>
-
                     </div>
                 </div>
             </section>
         </div>
+
         <section id="coupons" class="child" data-section-name="coupons">
             <!-- <div class="scroll" width="100px" height="50px">
                 <a href="#">
@@ -327,19 +331,20 @@
         </section>
 
         <section id="brands" class="child" data-section-name="brands">
-            <!-- <div class="scroll" width="100px" height="50px">
-                <a href="#">
-                    <i class="bi bi-arrow-down-circle"></i>
-                </a>
-            </div> -->
 
             <div id="brands-container">
-                <!-- <h2 class="section-heading header-padding" id="brands-heading"><span class="hyphen"> /</span> Our Brands
-                </h2> -->
 
                 <div id="brands-img-container">
-                    <div class="brands-logo" style="background-image: url('img/brands/svg/alain-mikli.svg')"></div>
-                    <div class="brands-logo" style="background-image: url('img/brands/svg/ana-hickmann.svg')"></div>
+                    <div class="brands-logo" style="background-image: url('img/brands/svg/alain-mikli.svg')"
+                        onmouseover="brandsModalFunc(event, 'alainMikli')" onmouseout="hiddenBrandsModalFunc()"></div>
+                    <div class=" brands-modal" id="alainMikli">
+                        <h3>Alain Mikli</h3>
+                    </div>
+                    <div class="brands-logo" style="background-image: url('img/brands/svg/ana-hickmann.svg')"
+                        onmouseover="brandsModalFunc(event, 'anaHickmann')" onmouseout="hiddenBrandsModalFunc()"></div>
+                    <div class=" brands-modal" id="anaHickmann">
+                        <h3>Ana Hickmann</h3>
+                    </div>
                     <div class="brands-logo" style="background-image: url('img/brands/svg/bob-sdrunk.svg')"></div>
                     <div class="brands-logo" style="background-image: url('img/brands/svg/bolle.svg')"></div>
                     <div class="brands-logo" style="background-image: url('img/brands/svg/cartier.svg')"></div>
@@ -462,7 +467,7 @@
             'slow');
     });
 
-    // Modal start
+    // Request appointment modal start
     var modal = document.getElementById("headerModal");
     var btn = document.getElementById("headerBtn");
     var span = document.getElementById("close");
@@ -494,8 +499,7 @@
     });
     // Modal end
 
-    // Services information start
-
+    // Brands modal start
     function changeInfo(event, serviceInfo) {
         var tablinks = document.getElementsByClassName('tablinks');
         var tabcontent = document.getElementsByClassName('tabcontent');
@@ -510,6 +514,32 @@
         document.getElementById(serviceInfo).style.display = "block";
         event.currentTarget.className += " active";
     }
+
+    function brandsModalFunc(event, brandName) {
+        var brandsLogo = document.getElementsByClassName('brands-logo');
+        var brandsModal = document.getElementsByClassName('brands-modal');
+        var i;
+
+        for (i = 0; i < brandsModal.length; i++) {
+            brandsModal[i].style.display = "none";
+        }
+        for (i = 0; i < brandsLogo.length; i++) {
+            brandsLogo[i].className = brandsLogo[i].className.replace(" active", "");
+        }
+        document.getElementById(brandName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+    // Modal end
+
+    function hiddenBrandsModalFunc() {
+        var brandsModal = document.getElementsByClassName('brands-modal');
+        var i;
+
+        for (i = 0; i < brandsModal.length; i++) {
+            brandsModal[i].style.display = "none";
+        }
+    }
+
 </script>
 
 </html>
