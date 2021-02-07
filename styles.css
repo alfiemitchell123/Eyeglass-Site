@@ -326,17 +326,17 @@ li:hover::before {
 
 .service-img {
     padding-bottom: 1em;
-    /* position: relative;
+    position: relative;
     left: 450px;
-    bottom: 250px; */
+    bottom: 250px;
 }
 
-.service-img-container {
+/* .service-img-container {
     position: relative;
     float: right;
     right: 15%;
     bottom: 60%;
-}
+} */
 
 #contactology, #imageConsulting, #retinography {
     display: none;
@@ -450,7 +450,6 @@ li:hover::before {
 
 .brands-logo:hover {
     border-radius: 10px;
-    cursor: pointer;
     box-shadow: 0px 4px 10px lightgray;
 }
 
@@ -515,14 +514,13 @@ li:hover::before {
     flex-wrap: wrap;
 } */
 
-#ig-photo-container {
+.ig-photo-container {
     padding-top: 3em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
     grid-column-gap: 50px;
     grid-row-gap: 50px;
-    margin-left: 25px;
     margin-top: 40px;
 }
 
@@ -537,8 +535,60 @@ li:hover::before {
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
-.ig-photo:hover {
-    opacity: 0.7;
+.ig-hover {
+    display: none;
+    background-color: black;
+    opacity: 1;
+    border: none;
+    position: absolute;
+}
+
+.ig-info-header, .ig-info-p {
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.ig-info-header {
+    font-size: 1.2em;
+}
+
+.ig-info-p {
+    font-size: 1em;
+}
+
+#ig-view-more {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    font-size: 0.8em;
+    background: linear-gradient(to right, white, white 50%, #F09217 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+#ig-view-more:hover {
+    background-position: 0 100%;
+}
+
+.ig-circle-pagination-container {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #F09217;
+    font-size: 0.6em;
+}
+
+.ig-circle-pagination {
+    padding-right: 0.4em;
 }
 
 footer {

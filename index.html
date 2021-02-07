@@ -337,14 +337,14 @@
                 <div id="brands-img-container">
                     <div class="brands-logo" style="background-image: url('img/brands/svg/alain-mikli.svg')"
                         onmouseover="brandsModalFunc(event, 'alainMikli')" onmouseout="hiddenBrandsModalFunc()"></div>
-                    <div class=" brands-modal" id="alainMikli">
+                    <!-- <div class="brands-modal" id="alainMikli">
                         <h3>Alain Mikli</h3>
-                    </div>
+                    </div> -->
                     <div class="brands-logo" style="background-image: url('img/brands/svg/ana-hickmann.svg')"
                         onmouseover="brandsModalFunc(event, 'anaHickmann')" onmouseout="hiddenBrandsModalFunc()"></div>
-                    <div class=" brands-modal" id="anaHickmann">
+                    <!-- <div class=" brands-modal" id="anaHickmann">
                         <h3>Ana Hickmann</h3>
-                    </div>
+                    </div> -->
                     <div class="brands-logo" style="background-image: url('img/brands/svg/bob-sdrunk.svg')"></div>
                     <div class="brands-logo" style="background-image: url('img/brands/svg/bolle.svg')"></div>
                     <div class="brands-logo" style="background-image: url('img/brands/svg/cartier.svg')"></div>
@@ -405,14 +405,96 @@
                 <div class="header-padding">
                     <h2 class="section-heading"><span class="hyphen"> /</span>Instagram
                     </h2>
-                    <div id="ig-photo-container">
-                        <div class="ig-photo" style="background-image: url('img/Coupon-1.png')"></div>
-                        <div class="ig-photo" style="background-image: url('img/Coupon-2.png')"></div>
-                        <div class="ig-photo" style="background-image: url('img/Coupon-3.png')"></div>
-                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-3.jpg')"></div>
-                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-4.jpg')"></div>
-                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-5.jpg')"></div>
+
+                    <div class="ig-photo-container">
+                        <div class="ig-photo" style="background-image: url('img/Coupon-1-min.png')"
+                            onmouseover="showIgInfo(event, 'igPhoto1')" onmouseout="hideIgInfo()">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto1">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ig-photo" style="background-image: url('img/Coupon-2-min.png')"
+                            onmouseover="showIgInfo(event, 'igPhoto2')" onmouseout="hideIgInfo()">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto2">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ig-photo" style="background-image: url('img/Coupon-3-min.png')"
+                            onmouseover="showIgInfo(event, 'igPhoto3')" onmouseout="hideIgInfo()">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto3">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-3-min.jpg')"
+                            onmouseover="showIgInfo(event, 'igPhoto4')" onmouseout="hideIgInfo()">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto4">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-4-min.jpg')"
+                            onmouseover="showIgInfo(event, 'igPhoto5')" onmouseout="hideIgInfo()">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto5">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ig-photo" style="background-image: url('img/Eyeglass-Image-5-min.jpg')"
+                            onmouseover="showIgInfo(event, 'igPhoto6')">
+                            <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
+                                target="_blank">
+                                <div class="ig-photo ig-hover" id="igPhoto6">
+                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
+                                        see
+                                        more...
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    <span class="ig-circle-pagination-container">
+                        <i class="bi bi-circle-fill ig-circle-pagination" onclick="currentSlide(1)"></i>
+                        <i class="bi bi-circle ig-circle-pagination" onclick="currentSlide(2)"></i>
+                        <i class="bi bi-circle ig-circle-pagination" onclick="currentSlide(3)"></i>
+                    </span>
+                    <a href="https://www.instagram.com/opticontrolfigueres/" target="_blank" id="ig-view-more"><span>
+                            <i class="bi bi-instagram" style="padding-right: 1em"></i>View more
+                            on Instagram</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -515,30 +597,79 @@
         event.currentTarget.className += " active";
     }
 
-    function brandsModalFunc(event, brandName) {
-        var brandsLogo = document.getElementsByClassName('brands-logo');
-        var brandsModal = document.getElementsByClassName('brands-modal');
+    function showIgInfo(event, igPhotoNum) {
+        var igPhoto = document.getElementsByClassName('ig-photo');
+        var igHover = document.getElementsByClassName('ig-hover');
         var i;
 
-        for (i = 0; i < brandsModal.length; i++) {
-            brandsModal[i].style.display = "none";
+        for (i = 0; i < igHover.length; i++) {
+            igHover[i].style.display = "none";
         }
-        for (i = 0; i < brandsLogo.length; i++) {
-            brandsLogo[i].className = brandsLogo[i].className.replace(" active", "");
+        for (i = 0; i < igPhoto.length; i++) {
+            igPhoto[i].className = igPhoto[i].className.replace(" active", "");
         }
-        document.getElementById(brandName).style.display = "block";
+        document.getElementById(igPhotoNum).style.display = "block";
         event.currentTarget.className += " active";
     }
-    // Modal end
 
-    function hiddenBrandsModalFunc() {
-        var brandsModal = document.getElementsByClassName('brands-modal');
+    function hideIgInfo() {
+        var igHover = document.getElementsByClassName('ig-hover');
         var i;
 
-        for (i = 0; i < brandsModal.length; i++) {
-            brandsModal[i].style.display = "none";
+        for (i = 0; i < igHover.length; i++) {
+            igHover[i].style.display = "none";
         }
     }
+
+    // var slideIndex = 1;
+    // showSlides(slideIndex);
+
+    // function currentSlide(n) {
+    //     showSlides(slideIndex = n);
+    // }
+
+    // function showSlides(n) {
+    //     var i;
+    //     var slides = document.getElementsByClassName("ig-photo-container");
+    //     var dots = document.getElementsByClassName("ig-circle-pagination");
+
+    //     if (n > slides.length) { slideIndex = 1 }
+    //     if (n < 1) { slideIndex = slides.length }
+
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none";
+    //     }
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace(" active", "");
+    //     }
+    //     slides[slideIndex - 1].style.display = "block";
+    //     dots[slideIndex - 1].className += " active";
+    // }
+
+    // function brandsModalFunc(event, brandName) {
+    //     var brandsLogo = document.getElementsByClassName('brands-logo');
+    //     var brandsModal = document.getElementsByClassName('brands-modal');
+    //     var i;
+
+    //     for (i = 0; i < brandsModal.length; i++) {
+    //         brandsModal[i].style.display = "none";
+    //     }
+    //     for (i = 0; i < brandsLogo.length; i++) {
+    //         brandsLogo[i].className = brandsLogo[i].className.replace(" active", "");
+    //     }
+    //     document.getElementById(brandName).style.display = "block";
+    //     event.currentTarget.className += " active";
+    // }
+    // // Modal end
+
+    // function hiddenBrandsModalFunc() {
+    //     var brandsModal = document.getElementsByClassName('brands-modal');
+    //     var i;
+
+    //     for (i = 0; i < brandsModal.length; i++) {
+    //         brandsModal[i].style.display = "none";
+    //     }
+    // }
 
 </script>
 
