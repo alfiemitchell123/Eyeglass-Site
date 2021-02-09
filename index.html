@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link media="(min-width: 275px)" rel="stylesheet" href="styles-mob.css"> -->
+
 </head>
 
 <body>
@@ -25,7 +27,7 @@
             </div> -->
 
             <nav class="navbar">
-                <a href="home" id="navbar-brand"><img src="img/logo.png" alt="OptiControl Logo" width="174px"></a>
+                <a href="home" id="navbar-brand"><img id="header-logo" src="img/logo.png" alt="OptiControl Logo"></a>
             </nav>
             <div class="header-text-container" style="z-index:2">
                 <div>
@@ -40,24 +42,25 @@
                         <p>We also provide services for optical <br> optometrists, contactology, image consulting <br>
                             and more. Request an appointment for details.</p>
                     </span>
-                    <button type="button" class="btn btn-primary" id="headerBtn"><i class="bi bi-pen"
+                    <button type="button" class="btn btn-primary requestBtn"
+                        onclick="requestApptModal('requestModal1')"><i class="bi bi-pen"
                             style="margin-right: 1rem"></i>Request Appointment</button>
                 </div>
             </div>
 
             <!-- Request Appointment Button Modal -->
-            <div id="headerModal" class="modal">
+            <div id="requestModal1" class="modal">
 
                 <div class="modal-content">
-                    <span id="close">&times;</span>
+                    <span class="close" onclick="closeModal('requestModal1')">&times;</span>
                     <h3 style="text-align: center;">Request Appointment</h3>
-                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                    <form class="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
                         <input type="text" placeholder="First name..." name="firstname">
                         <input type="text" placeholder="Last name..." name="lastname">
                         <input type="text" placeholder="Email address..." name="_replyto">
                         <input type="text" placeholder="Subject..." name="subject">
                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                        <button type="submit" class="btn btn-primary send-btn-modal">Send</button>
                     </form>
                 </div>
 
@@ -123,26 +126,26 @@
                                 </p>
                                 <p class="service-p">
                                     Call us on 12345678 or
-                                    <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                    <br><span class="span-link"><a class="requestBtn" style="cursor: pointer"
+                                            onclick="requestApptModal('requestModal2')">request an
                                             appointment</a></span>
                                     online.
                                 </p>
 
                                 <!-- Request Appointment Button Modal -->
-                                <div id="headerModal" class="modal">
+                                <div id="requestModal2" class="modal">
 
                                     <div class="modal-content">
-                                        <span id="close">&times;</span>
+                                        <span class="close" onclick="closeModal('requestModal2')">&times;</span>
                                         <h3 style="text-align: center;">Request Appointment</h3>
-                                        <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                        <form class="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
                                             <input type="text" placeholder="First name..." name="firstname">
                                             <input type="text" placeholder="Last name..." name="lastname">
                                             <input type="text" placeholder="Email address..." name="_replyto">
                                             <input type="text" placeholder="Subject..." name="subject">
                                             <textarea rows="4" cols="50" placeholder="Message..."
                                                 name="message"></textarea>
-                                            <button type="submit" class="btn btn-primary"
-                                                id="send-btn-modal">Send</button>
+                                            <button type="submit" class="btn btn-primary send-btn-modal">Send</button>
                                         </form>
                                     </div>
 
@@ -171,24 +174,25 @@
                             </p>
                             <p class="service-p">
                                 Call us on 12345678 or
-                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                <br><span class="span-link"><a class="requestBtn" style="cursor: pointer"
+                                        onclick="requestApptModal('requestModal3')">request an
                                         appointment</a></span>
                                 online.
                             </p>
 
                             <!-- Request Appointment Button Modal -->
-                            <div id="headerModal" class="modal">
+                            <div id="requestModal3" class="modal">
 
                                 <div class="modal-content">
-                                    <span id="close">&times;</span>
+                                    <span class="close" onclick="closeModal('requestModal3')">&times;</span>
                                     <h3 style="text-align: center;">Request Appointment</h3>
-                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                    <form class="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
                                         <input type="text" placeholder="First name..." name="firstname">
                                         <input type="text" placeholder="Last name..." name="lastname">
                                         <input type="text" placeholder="Email address..." name="_replyto">
                                         <input type="text" placeholder="Subject..." name="subject">
                                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                        <button type="submit" class="btn btn-primary send-btn-modal">Send</button>
                                     </form>
                                 </div>
 
@@ -215,24 +219,25 @@
                             </p>
                             <p class="service-p">
                                 Call us on 12345678 or
-                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                <br><span class="span-link"><a class="requestBtn" style="cursor: pointer"
+                                        onclick="requestApptModal('requestModal4')">request an
                                         appointment</a></span>
                                 online.
                             </p>
 
                             <!-- Request Appointment Button Modal -->
-                            <div id="headerModal" class="modal">
+                            <div id="requestModal4" class="modal">
 
                                 <div class="modal-content">
-                                    <span id="close">&times;</span>
+                                    <span class="close" onclick="closeModal('requestModal4')">&times;</span>
                                     <h3 style="text-align: center;">Request Appointment</h3>
-                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                    <form class="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
                                         <input type="text" placeholder="First name..." name="firstname">
                                         <input type="text" placeholder="Last name..." name="lastname">
                                         <input type="text" placeholder="Email address..." name="_replyto">
                                         <input type="text" placeholder="Subject..." name="subject">
                                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                        <button type="submit" class="btn btn-primary send-btn-modal">Send</button>
                                     </form>
                                 </div>
 
@@ -261,24 +266,25 @@
                             </p>
                             <p class="service-p">
                                 Call us on 12345678 or
-                                <br><span class="span-link"><a id="aRequest" style="cursor: pointer">request an
+                                <br><span class="span-link"><a class="requestBtn" style="cursor: pointer"
+                                        onclick="requestApptModal('requestModal5')">request an
                                         appointment</a></span>
                                 online.
                             </p>
 
                             <!-- Request Appointment Button Modal -->
-                            <div id="headerModal" class="modal">
+                            <div id="requestModal5" class="modal">
 
                                 <div class="modal-content">
-                                    <span id="close">&times;</span>
+                                    <span class="close" onclick="closeModal('requestModal5')">&times;</span>
                                     <h3 style="text-align: center;">Request Appointment</h3>
-                                    <form id="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
+                                    <form class="modal-form" action="https://formspree.io/f/mpzonqgj" method="POST">
                                         <input type="text" placeholder="First name..." name="firstname">
                                         <input type="text" placeholder="Last name..." name="lastname">
                                         <input type="text" placeholder="Email address..." name="_replyto">
                                         <input type="text" placeholder="Subject..." name="subject">
                                         <textarea rows="4" cols="50" placeholder="Message..." name="message"></textarea>
-                                        <button type="submit" class="btn btn-primary" id="send-btn-modal">Send</button>
+                                        <button type="submit" class="btn btn-primary send-btn-modal">Send</button>
                                     </form>
                                 </div>
 
@@ -381,11 +387,6 @@
         </section>
 
         <section id="instagram-contact" class="child" data-section-name="contact">
-            <!-- <div class="scroll" width="100px" height="50px">
-                <a href="#">
-                    <i class="bi bi-arrow-down-circle"></i>
-                </a>
-            </div> -->
             <div id="contact-container">
                 <div class="header-padding">
                     <h2 class="section-heading"><span class="hyphen"> /</span>Contact
@@ -412,7 +413,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto1">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"New Tom Ford..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -425,7 +426,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto2">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"Contacts galore..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -438,7 +439,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto3">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"RayBan case..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -451,7 +452,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto4">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"Up next in Dior..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -464,7 +465,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto5">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"Trending now..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -477,7 +478,7 @@
                             <a href="https://www.instagram.com/p/CK6Ruk9JoNz/" style="position: absolute"
                                 target="_blank">
                                 <div class="ig-photo ig-hover" id="igPhoto6">
-                                    <h3 class="ig-info-header">"New Tom Ford..."</h3>
+                                    <h3 class="ig-info-header"><i>"Sneak peak..."</i></h3>
                                     <p class="ig-info-p"><span style="color: #F09217">Click here</span> <br>to
                                         see
                                         more...
@@ -549,39 +550,70 @@
             'slow');
     });
 
+    // // Request appointment modal start
+    // var modal = document.getElementById("headerModal");
+    // var btn = document.getElementById("headerBtn");
+    // var span = document.getElementsByClassName("close");
+    // var i;
+
+    // var arequest = document.getElementById("aRequest");
+
+    // btn.onclick = function () {
+    //     modal.style.display = "block";
+    // }
+
+    // arequest.onclick = function () {
+    //     modal.style.display = "block";
+    // }
+
+    // span.onclick = function () {
+    //     modal.style.display = "none";
+    // }
+
+    // window.onclick = function (event) {
+    //     if (event.target == modal) {
+    //         modal.style.display = "none";
+    //     }
+    // }
+
+    // $(document).keyup(function (e) {
+    //     if (e.keyCode == 27) {
+    //         modal.style.display = "none";
+    //     }
+    // });
+    // // Modal end
+
+
     // Request appointment modal start
-    var modal = document.getElementById("headerModal");
-    var btn = document.getElementById("headerBtn");
-    var span = document.getElementById("close");
+    var modal = document.getElementsByClassName("headerModal");
+    var btn = document.getElementsByClassName("headerBtn");
+    var i;
 
-    var arequest = document.getElementById("aRequest");
-
-    btn.onclick = function () {
-        modal.style.display = "block";
+    function requestApptModal(modalNum) {
+        document.getElementById(modalNum).style.display = "block";
     }
 
-    arequest.onclick = function () {
-        modal.style.display = "block";
+    function closeModal(modalNum) {
+        document.getElementById(modalNum).style.display = "none";
     }
 
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    window.onclick = function (event, modalNum) {
+        for (i = 0; i < modal.length; i++) {
+            if (event.target == modal) {
+                document.getElementById(modalNum).style.display = "none";
+            }
         }
     }
 
     $(document).keyup(function (e) {
         if (e.keyCode == 27) {
-            modal.style.display = "none";
+            document.getElementById('requestModal1').style.display = "none";
         }
-    });
+    })
+
     // Modal end
 
-    // Brands modal start
+    // Services modal start
     function changeInfo(event, serviceInfo) {
         var tablinks = document.getElementsByClassName('tablinks');
         var tabcontent = document.getElementsByClassName('tabcontent');
@@ -596,7 +628,9 @@
         document.getElementById(serviceInfo).style.display = "block";
         event.currentTarget.className += " active";
     }
+    // Modal end
 
+    // Instagram modal start
     function showIgInfo(event, igPhotoNum) {
         var igPhoto = document.getElementsByClassName('ig-photo');
         var igHover = document.getElementsByClassName('ig-hover');
@@ -620,6 +654,7 @@
             igHover[i].style.display = "none";
         }
     }
+    // Modal end
 
     // var slideIndex = 1;
     // showSlides(slideIndex);
