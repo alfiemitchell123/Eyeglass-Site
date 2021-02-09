@@ -19,7 +19,16 @@
 
     <div class="container">
 
-        <div id="header" class="d-flex pl-0 pr-0 flex-column child" data-section-name="landing">
+        <ul class="pagination">
+            <li class="page-li"><a href=""></a></li>
+            <li class="page-li"><a href=""></a></li>
+            <li class="page-li"><a href=""></a></li>
+            <li class="page-li"><a href=""></a></li>
+            <li class="page-li"><a href=""></a></li>
+            <li class="page-li"><a href=""></a></li>
+        </ul>
+
+        <div id="header" class="d-flex pl-0 pr-0 flex-column child" data-section-name="Landing">
             <!-- <div class="scroll" width="100px" height="50px">
                 <a href="#">
                     <i class="bi bi-arrow-down-circle"></i>
@@ -66,8 +75,10 @@
 
             </div>
 
+            <a href="" class="scroll-arrow">Scroll for more</a>
+
         </div>
-        <div id="information" class="child" data-section-name="information">
+        <div id="information" class="child" data-section-name="Services">
             <!-- <div class="scroll" width="100px" height="50px">
                 <a href="#">
                     <i class="bi bi-arrow-down-circle"></i>
@@ -79,12 +90,13 @@
                     <div id="about-info-section">
                         <h2 class="section-heading"><span class="hyphen"> /</span>About Us</h2>
                         <ul class="list-padding info-ul">
-                            <li>Based in <strong>Spain</strong> <span class="emoji">🇪🇸</span> </li>
-                            <li><strong>Independent</strong> and <strong>family-owned</strong> <span
+                            <li class="star-li">Based in <strong>Spain</strong> <span class="emoji">🇪🇸</span> </li>
+                            <li class="star-li"><strong>Independent</strong> and <strong>family-owned</strong> <span
                                     class="emoji">👪</span>
                             </li>
-                            <li><strong>Multi-lingual</strong> <span class="emoji">🇬🇧 🇫🇷 🇮🇹</span></li>
-                            <li><strong>100% satisfaction</strong> (or money-back guarantee) <span
+                            <li class="star-li"><strong>Multi-lingual</strong> <span class="emoji">🇬🇧 🇫🇷 🇮🇹</span>
+                            </li>
+                            <li class="star-li"><strong>100% satisfaction</strong> (or money-back guarantee) <span
                                     class="emoji">✅</span></li>
                         </ul>
                     </div>
@@ -97,16 +109,20 @@
                         <h2 class="section-heading b-heading"><span class="hyphen"> /</span>Our Services
                         </h2>
                         <ul class="service-menu">
-                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'sales')">Eyeglass
+                            <li class="service-li-item tablinks star-li" onmouseover="changeInfo(event, 'sales')">
+                                Eyeglass
                                 Sales</li>
-                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'contactology')">
+                            <li class="service-li-item tablinks star-li"
+                                onmouseover="changeInfo(event, 'contactology')">
                                 Contactology
                             </li>
-                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'imageConsulting')">
+                            <li class="service-li-item tablinks star-li"
+                                onmouseover="changeInfo(event, 'imageConsulting')">
                                 Image
                                 Consulting
                             </li>
-                            <li class="service-li-item tablinks" onmouseover="changeInfo(event, 'retinography')">
+                            <li class="service-li-item tablinks star-li"
+                                onmouseover="changeInfo(event, 'retinography')">
                                 Retinography
                             </li>
                         </ul>
@@ -301,7 +317,7 @@
             </section>
         </div>
 
-        <section id="coupons" class="child" data-section-name="coupons">
+        <section id="coupons" class="child" data-section-name="Coupons">
             <!-- <div class="scroll" width="100px" height="50px">
                 <a href="#">
                     <i class="bi bi-arrow-down-circle"></i>
@@ -336,7 +352,7 @@
             </div>
         </section>
 
-        <section id="brands" class="child" data-section-name="brands">
+        <section id="brands" class="child" data-section-name="Brands">
 
             <div id="brands-container">
 
@@ -386,7 +402,7 @@
             </div>
         </section>
 
-        <section id="instagram-contact" class="child" data-section-name="contact">
+        <section id="instagram-contact" class="child" data-section-name="Contact">
             <div id="contact-container">
                 <div class="header-padding">
                     <h2 class="section-heading"><span class="hyphen"> /</span>Contact
@@ -500,7 +516,7 @@
             </div>
         </section>
 
-        <footer class="child" data-section-name="footer">
+        <footer class="child" data-section-name="Change-Language">
             <div id="trademark-container">
                 <span id="trademark">OptiControl™</span>
             </div>
@@ -542,47 +558,42 @@
         $('[data-toggle="tooltip"]').tooltip()
     });
 
-    $("#a-scroll").click(function () {
-        console.log('Clicked');
-        $('html,body').animate({
-            scrollTop: $("#instagram-contact").offset().top
-        },
-            'slow');
+    $(function () {
+        $.scrollify({
+            section: ".child",
+            scrollbars: false,
+            setHeights: false,
+
+            before: function (i, panels) {
+                var ref = panels[i].attr("data-section-name");
+
+                $(".pagination .active").removeClass("active");
+                $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+            },
+            afterRender: function () {
+                var pagination = "<ul class=\"pagination\">";
+                var activeClass = "";
+                $(".child").each(function (i) {
+                    activeClass = "";
+                    if (i === $.scrollify.currentIndex()) {
+                        activeClass = "active";
+                    }
+                    pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+                });
+
+                pagination += "</ul>";
+
+                $("#header").append(pagination);
+                $(".pagination a").on("click", $.scrollify.move);
+            }
+        });
+
+        $(".scroll-arrow").click(function (e) {
+            e.preventDefault();
+
+            $.scrollify.next();
+        });
     });
-
-    // // Request appointment modal start
-    // var modal = document.getElementById("headerModal");
-    // var btn = document.getElementById("headerBtn");
-    // var span = document.getElementsByClassName("close");
-    // var i;
-
-    // var arequest = document.getElementById("aRequest");
-
-    // btn.onclick = function () {
-    //     modal.style.display = "block";
-    // }
-
-    // arequest.onclick = function () {
-    //     modal.style.display = "block";
-    // }
-
-    // span.onclick = function () {
-    //     modal.style.display = "none";
-    // }
-
-    // window.onclick = function (event) {
-    //     if (event.target == modal) {
-    //         modal.style.display = "none";
-    //     }
-    // }
-
-    // $(document).keyup(function (e) {
-    //     if (e.keyCode == 27) {
-    //         modal.style.display = "none";
-    //     }
-    // });
-    // // Modal end
-
 
     // Request appointment modal start
     var modal = document.getElementsByClassName("headerModal");
