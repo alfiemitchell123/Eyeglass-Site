@@ -163,6 +163,12 @@
         width: 174px;
     }
     
+    #headerRequestBtn {
+        margin-left: 4.75em;
+        width: 25%;
+    }
+
+
     .navbar {
         width: 91vw;
         margin-left: 6em;
@@ -343,6 +349,10 @@
     
     #about-info-section li {
         color: white;
+    }
+
+    #about-br {
+        display: none;
     }
     
     .info-ul {
